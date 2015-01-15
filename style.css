@@ -1,0 +1,12 @@
+.customize-support #menu-appearance li a[href="themes.php?page=custom-header"],
+.customize-support #menu-appearance li a[href="themes.php?page=custom-background"] {
+    display: block;
+}
+#menu-appearance li.hide-if-no-customize a[href$="header_image"],
+#menu-appearance li.hide-if-no-customize a[href$="background_image"] {
+    display: none;
+}
+.customize-support #menu-appearance li a[href="themes.php?page=custom-header"]:before,
+.customize-support #menu-appearance li a[href="themes.php?page=custom-background"]:before {
+    content: '* ';
+}
