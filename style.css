@@ -1,12 +1,36 @@
-.customize-support #menu-appearance li a[href="themes.php?page=custom-header"],
-.customize-support #menu-appearance li a[href="themes.php?page=custom-background"] {
-    display: block;
+/**
+ * TB Old-fashioned Header and Background - v1.1
+ *
+ * https://github.com/TwoBeers/tb-old-fashioned-hnb
+ *
+ * Copyright 2015 TwoBeers.net http://www.twobeers.net/
+ */
+
+/* admin side */
+#adminmenu #menu-appearance li a[href="themes.php?page=custom-header"],
+#adminmenu #menu-appearance li a[href="themes.php?page=custom-background"] {
+	display: block;
 }
-#menu-appearance li.hide-if-no-customize a[href$="header_image"],
-#menu-appearance li.hide-if-no-customize a[href$="background_image"] {
-    display: none;
-}
-.customize-support #menu-appearance li a[href="themes.php?page=custom-header"]:before,
-.customize-support #menu-appearance li a[href="themes.php?page=custom-background"]:before {
+#adminmenu #menu-appearance li a[href="themes.php?page=custom-header"]:before,
+#adminmenu #menu-appearance li a[href="themes.php?page=custom-background"]:before {
     content: '* ';
+}
+#adminmenu #menu-appearance li a[href$="header_image"],
+#adminmenu #menu-appearance li a[href$="background_image"] {
+	display: none;
+}
+
+/* front side */
+#wpadminbar #wp-admin-bar-root-default #wp-admin-bar-header,
+#wpadminbar #wp-admin-bar-root-default #wp-admin-bar-background {
+	display: block;
+}
+#wpadminbar #wp-admin-bar-root-default #wp-admin-bar-header a:before,
+#wpadminbar #wp-admin-bar-root-default #wp-admin-bar-background a:before {
+	content: '* ';
+	color: #eee;
+}
+#wpadminbar #wp-admin-bar-root-default #wp-admin-bar-customize-header,
+#wpadminbar #wp-admin-bar-root-default #wp-admin-bar-customize-background {
+	display: none;
 }

@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: TB Old-fashioned Header and Background
- * Version:     1.0
- * Plugin URI:  
+ * Version:     1.1
+ * Plugin URI:  https://github.com/TwoBeers/tb-old-fashioned-hnb
  * Author:      TwoBeers Crew
  * Author URI:  http://www.twobeers.net/
  * License:     GPLv2 or later
@@ -30,25 +30,13 @@
 
 class TBOldFashionedHnB {
 
-	private static $instance;
-
-	/**
-	 * Get singleton instance.
-	 */
-	public static function instance() {
-		if ( ! isset( self::$instance ) ) {
-			self::$instance = new self();
-		}
-
-		return self::$instance;
-	}
-
 	/**
 	 * Constructor.
 	 */
-	protected function __construct() {
+	function __construct() {
 		if ( version_compare( $GLOBALS['wp_version'], '4.1', '>=' ) ) {
 			add_action( 'admin_print_styles', array( $this, 'add_css' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'add_css' ) );
 		}
 	}
 
@@ -63,4 +51,4 @@ class TBOldFashionedHnB {
 
 }
 
-TBOldFashionedHnB::instance();
+new TBOldFashionedHnB;

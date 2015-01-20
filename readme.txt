@@ -29,6 +29,11 @@ Restores the links to the old-fashioned pages for the custom header and the cust
 
 == Changelog ==
 
+= 1.1 =
+
+* Removed useless singleton
+* Links restored in the admin bar
+
 = 1.0 =
 
 * Initial Release
